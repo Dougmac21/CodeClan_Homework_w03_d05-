@@ -1,2 +1,2 @@
-FLASK_APP=prsgame.py
+FLASK_APP=prs_game.py
 FLASK_ENV=development
