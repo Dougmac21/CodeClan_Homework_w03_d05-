@@ -4,6 +4,6 @@ from app.models.player import *
 from app.models.prs import *
 
 @app.route('/')
-def index(index):
-    return render_template('index.html')
+def hello_world():
+    return "Hello World"
 
