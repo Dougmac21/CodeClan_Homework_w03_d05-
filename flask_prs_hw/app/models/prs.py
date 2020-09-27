@@ -8,7 +8,7 @@ class Prs():
     def play_game(self, player_1, player_2):
 
         permitted_choices = ("Paper", "Rock", "Scissors")
-        
+
         if player_1.game_choice not in permitted_choices:
             return "Player 1 must pick Paper, Rock or Scissors!"
         
