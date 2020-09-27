@@ -23,4 +23,8 @@ class PlayerTest(unittest.TestCase):
         self.assertEqual("Scissors", self.player_1.game_choice)
         self.assertEqual("Paper", self.player_2.game_choice)
 
-    
+    def test_game_choices_are_limited(self):
+        self.player_1 = Player("Marko", "Scissors")
+        self.player_2 = Player("Polo", "Hammer")
+        self.assertEqual("Scissors", self.player_1.game_choice)
+        self.assertEqual("You must choose paper, rock or scissors.", self.player_2.game_choice)
