@@ -14,3 +14,13 @@ class PlayerTest(unittest.TestCase):
 
     def test_player_has_game_choice(self):
         self.assertEqual("Rock", self.player.game_choice)
+
+    def test_can_have_two_players(self):
+        self.player_1 = Player("Marko", "Scissors")
+        self.player_2 = Player("Polo", "Paper")
+        self.assertEqual("Marko", self.player_1.name)
+        self.assertEqual("Polo", self.player_2.name)
+        self.assertEqual("Scissors", self.player_1.game_choice)
+        self.assertEqual("Paper", self.player_2.game_choice)
+
+    
