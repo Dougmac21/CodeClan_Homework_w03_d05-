@@ -7,13 +7,19 @@ from app.models.prs import Prs
 class PrsTest(unittest.TestCase):
 
     def setUp(self):
-        self.prs = Prs("Rock", "Paper")
+        self.prs = Prs.play_game(self, "Rock", "Paper")
 
-    
-    def test_choices_are_passed_to_game(self):
-        self.assertEqual("Rock", self.prs.player_1_choice)
-        self.assertEqual("Paper", self.prs.player_2_choice)
-        
+
+    def test_play_game_to_tie(self):
+        self.player_1 = Player("Douglas", "Rock")
+        self.player_2 = Player("Marko", "Rock")
+        self.assertEqual("It's a tie!", Prs.play_game(self, self.player_1.game_choice, self.player_2.game_choice))
+
+    def test_play_game_to_victory(self):
+        self.player_1 = Player("Sally", "Paper")
+        self.player_2 = Player("John", "Rock")
+        self.assertEqual("Somebody has won!", Prs.play_game(self, self.player_1.game_choice, self.player_2.game_choice))
+
 
 
 
