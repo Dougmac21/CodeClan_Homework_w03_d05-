@@ -5,7 +5,8 @@ class Prs():
         self.player_2_choice = player_2_choice
         
 
-    
+    def play_game(self):
+        pass
 
 
     
