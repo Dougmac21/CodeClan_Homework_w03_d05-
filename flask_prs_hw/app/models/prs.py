@@ -9,10 +9,12 @@ class Prs():
 
         permitted_choices = ("Paper", "Rock", "Scissors")
 
-        if player_1.game_choice not in permitted_choices:
+
+        if player_1.game_choice not in permitted_choices and player_2.game_choice not in permitted_choices:
+            return "Both players must pick Paper, Rock or Scissors!"
+        elif player_1.game_choice not in permitted_choices:
             return "Player 1 must pick Paper, Rock or Scissors!"
-        
-        if player_2.game_choice not in permitted_choices:
+        elif player_2.game_choice not in permitted_choices:
             return "Player 2 must pick Paper, Rock or Scissors!"
         
         if player_1.game_choice == player_2.game_choice:

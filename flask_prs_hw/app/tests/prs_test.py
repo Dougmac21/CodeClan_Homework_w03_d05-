@@ -25,10 +25,20 @@ class PrsTest(unittest.TestCase):
         self.player_2 = Player("Abel", "Rock")
         self.assertEqual("Player 2 wins!", Prs.play_game(self, self.player_1, self.player_2))
 
-    def test_game_must_have_valid_choice(self):
+    def test_game_must_have_valid_choice__player_1_invalid(self):
         self.player_1 = Player("Larry", "Hammer")
         self.player_2 = Player("Paula", "Paper")
         self.assertEqual("Player 1 must pick Paper, Rock or Scissors!", Prs.play_game(self, self.player_1, self.player_2))
+    
+    def test_game_must_have_valid_choice__player_2_invalid(self):
+        self.player_1 = Player("Larry", "Paper")
+        self.player_2 = Player("Paula", "Hammer")
+        self.assertEqual("Player 2 must pick Paper, Rock or Scissors!", Prs.play_game(self, self.player_1, self.player_2))
+    
+    def test_game_must_have_valid_choice__player_1_invalid(self):
+        self.player_1 = Player("Larry", "Hammer")
+        self.player_2 = Player("Paula", "Shotgun")
+        self.assertEqual("Both players must pick Paper, Rock or Scissors!", Prs.play_game(self, self.player_1, self.player_2))
     
 
 
