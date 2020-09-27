@@ -16,7 +16,8 @@ class Prs():
         else:
             player_2.game_choice = player_2.game_choice.capitalize()
 
-        permitted_choices = ("Paper", "Rock", "Scissors", "Lizard", "Spock")
+        permitted_choices = ("Paper", "Rock", "Scissors", "Lizard", "Spock", "Shotgun", "Surrender")
+        cpu_player_malcolm_choices = ("Paper", "Rock", "Scissors", "Lizard", "Spock")
         cpu_player_hannah_choices = ("Scissors", "Rock")    # Spock always beats Hannah
         cpu_player_chris_choices = ("Paper", "Lizard")      # Scissors always beats Chris
         cpu_players = ("Hal", "Morag", "Chris", "Hannah", "Zsolt", "Malcolm", "Harrison", "Cpu")
@@ -31,6 +32,8 @@ class Prs():
             winning_choice = "Rock"
         elif player_1.game_choice == "Spock":
             winning_choice = "Lizard"
+        elif player_1.game_choice == "Shotgun":
+            winning_choice = "Surrender"
 
         import random
         if player_2.name == "Cpu":
@@ -47,7 +50,7 @@ class Prs():
         elif player_2.name == "Zsolt":
             player_2.game_choice = "Spock"
         elif player_2.name == "Malcolm":
-            player_2.game_choice = random.choice(permitted_choices)
+            player_2.game_choice = random.choice(cpu_player_malcolm_choices)
         elif player_2.name == "Harrison":
             player_2.game_choice = winning_choice
 
@@ -110,4 +113,7 @@ class Prs():
                 return f"{player_1.name} chose {player_1.game_choice}. {player_2.name} chose {player_2.game_choice}. Spock smashes Scissors. {player_1.name} wins!"
             elif player_2.game_choice == "Lizard":
                 return f"{player_1.name} chose {player_1.game_choice}. {player_2.name} chose {player_2.game_choice}. Lizard poisons Spock. {player_2.name} wins!"
-
+        
+        elif player_1.game_choice == "Shotgun":
+            if player_2.game_choice == "Surrender":
+                return f"{player_1.name} chose {player_1.game_choice} because {player_2.name} is cheating. {player_2.name} chose {player_2.game_choice}. {player_1.name} wins!"
