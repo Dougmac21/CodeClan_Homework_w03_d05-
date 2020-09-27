@@ -115,5 +115,9 @@ class Prs():
                 return f"{player_1.name} chose {player_1.game_choice}. {player_2.name} chose {player_2.game_choice}. Lizard poisons Spock. {player_2.name} wins!"
         
         elif player_1.game_choice == "Shotgun":
-            if player_2.game_choice == "Surrender":
                 return f"{player_1.name} chose {player_1.game_choice} because {player_2.name} is cheating. {player_2.name} chose {player_2.game_choice}. {player_1.name} wins!"
+        
+        elif player_1.game_choice == "Surrender":
+                return f"{player_1.name} chose {player_1.game_choice}. {player_2.name} wins!"
+                
+                
