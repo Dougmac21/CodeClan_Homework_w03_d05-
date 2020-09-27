@@ -13,7 +13,7 @@ class PrsTest(unittest.TestCase):
     def test_play_game_to_tie(self):
         self.player_1 = Player("Douglas", "Rock")
         self.player_2 = Player("Marko", "Rock")
-        self.assertEqual("It's a tie!", Prs.play_game(self, self.player_1, self.player_2))
+        self.assertEqual("Both Douglas and Marko have chosen the same thing so it's a tie!", Prs.play_game(self, self.player_1, self.player_2))
 
     def test_play_game_to_victory_player_1(self):
         self.player_1 = Player("Sally", "Paper")

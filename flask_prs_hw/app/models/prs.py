@@ -11,14 +11,14 @@ class Prs():
 
 
         if player_1.game_choice not in permitted_choices and player_2.game_choice not in permitted_choices:
-            return "Both players must pick from the permitted choices!"
+            return f"Both {player_1.name} and {player_2.name} must pick from the permitted choices!"
         elif player_1.game_choice not in permitted_choices:
-            return f" must pick from the permitted choices!"
+            return f"{player_1.name} must pick from the permitted choices!"
         elif player_2.game_choice not in permitted_choices:
-            return "Player 2 must pick from the permitted choices!"
+            return f"{player_2.name} must pick from the permitted choices!"
         
         if player_1.game_choice == player_2.game_choice:
-            return "It's a tie!"
+            return f"Both {player_1.name} and {player_2.name} have chosen the same thing so it's a tie!"
 
         elif player_1.game_choice == "Paper":
             if player_2.game_choice == "Rock":
