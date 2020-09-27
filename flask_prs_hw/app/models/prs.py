@@ -7,9 +7,13 @@ class Prs():
 
     def play_game(self, player_1, player_2):
 
+        player_1.name.capitalize
+        player_2.name.capitalize
+        player_1.game_choice.capitalize
+        player_2.game_choice.capitalize
         permitted_choices = ("Paper", "Rock", "Scissors", "Lizard", "Spock", "CPU")
         cpu_player_data_choices = ("Lizard", "Rock")
-        cpu_players = ("HAL-9000", "Deep-Thought", "TARDIS", "Data", "ZX-81", "Robbie-Robot", "Unbeatable")
+        cpu_players = ("Hal", "Morag", "Chris", "Hannah", "Zsolt", "Malcolm", "Harrison")
 
         winning_choice = "win"
         if player_1.game_choice == "Paper":
@@ -26,19 +30,19 @@ class Prs():
         import random
         if player_2.name == "CPU" and player_2.game_choice == "CPU":
             player_2.name = random.choice(cpu_players)
-            if player_2.name == "HAL-9000":
+            if player_2.name == "Hal":
                 player_2.game_choice = "Paper"
-            elif player_2.name == "Deep-Thought":
+            elif player_2.name == "Morag":
                 player_2.game_choice = "Rock"
-            elif player_2.name == "TARDIS":
+            elif player_2.name == "Chris":
                 player_2.game_choice = "Scissors"
-            elif player_2.name == "Data":
+            elif player_2.name == "Hannah":
                 player_2.game_choice = random.choice(cpu_player_data_choices)
-            elif player_2.name == "XZ-81":
+            elif player_2.name == "Zsolt":
                 player_2.game_choice = "Spock"
-            elif player_2.name == "Robbie-Robot":
+            elif player_2.name == "Malcolm":
                 player_2.game_choice = random.choice(permitted_choices)
-            elif player_2.name == "Unbeatable":
+            elif player_2.name == "Harrison":
                 player_2.game_choice = winning_choice
 
         if player_1.game_choice not in permitted_choices and player_2.game_choice not in permitted_choices:
