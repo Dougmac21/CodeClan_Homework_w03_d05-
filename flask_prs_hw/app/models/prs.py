@@ -8,14 +8,20 @@ class Prs():
     def play_game(self, player_1, player_2):
 
         player_1.name.capitalize
-        player_2.name.capitalize
+        if player_2.name == "cpu" or "CPU" or "CPu" or "cPU" or "cPu" or "cpU":
+            player_2.name.upper
+        else:
+            player_2.name.capitalize
         player_1.game_choice.capitalize
-        player_2.game_choice.capitalize
-        permitted_choices = ("Paper", "Rock", "Scissors", "Lizard", "Spock", "CPU")
+        if player_2.game_choice == None:
+            pass
+        else:
+            player_2.game_choice.capitalize
+        permitted_choices = ("Paper", "Rock", "Scissors", "Lizard", "Spock")
         cpu_player_data_choices = ("Lizard", "Rock")
-        cpu_players = ("Hal", "Morag", "Chris", "Hannah", "Zsolt", "Malcolm", "Harrison")
+        cpu_players = ("Hal", "Morag", "Chris", "Hannah", "Zsolt", "Malcolm", "Harrison", "CPU")
 
-        winning_choice = "win"
+        winning_choice = "Shotgun"
         if player_1.game_choice == "Paper":
             winning_choice == "Scissors"
         elif player_1.game_choice == "Rock":
@@ -28,22 +34,22 @@ class Prs():
             winning_choice == "Lizard"
 
         import random
-        if player_2.name == "CPU" and player_2.game_choice == "CPU":
+        if player_2.name == "CPU":
             player_2.name = random.choice(cpu_players)
-            if player_2.name == "Hal":
-                player_2.game_choice = "Paper"
-            elif player_2.name == "Morag":
-                player_2.game_choice = "Rock"
-            elif player_2.name == "Chris":
-                player_2.game_choice = "Scissors"
-            elif player_2.name == "Hannah":
-                player_2.game_choice = random.choice(cpu_player_data_choices)
-            elif player_2.name == "Zsolt":
-                player_2.game_choice = "Spock"
-            elif player_2.name == "Malcolm":
-                player_2.game_choice = random.choice(permitted_choices)
-            elif player_2.name == "Harrison":
-                player_2.game_choice = winning_choice
+        elif player_2.name == "Hal":
+            player_2.game_choice = "Paper"
+        elif player_2.name == "Morag":
+            player_2.game_choice = "Rock"
+        elif player_2.name == "Chris":
+            player_2.game_choice = "Scissors"
+        elif player_2.name == "Hannah":
+            player_2.game_choice = random.choice(cpu_player_data_choices)
+        elif player_2.name == "Zsolt":
+            player_2.game_choice = "Spock"
+        elif player_2.name == "Malcolm":
+            player_2.game_choice = random.choice(permitted_choices)
+        elif player_2.name == "Harrison":
+            player_2.game_choice = winning_choice
 
         if player_1.game_choice not in permitted_choices and player_2.game_choice not in permitted_choices:
             return f"Both {player_1.name} and {player_2.name} must pick from the permitted choices!"
@@ -53,7 +59,7 @@ class Prs():
             return f"{player_2.name} must pick from the permitted choices!"
         
         if player_1.game_choice == player_2.game_choice:
-            return f"Both {player_1.name} and {player_2.name} have chosen the same thing so it's a tie!"
+            return f"Both {player_1.name} and {player_2.name} have chosen {player_1.game_choice} so it's a tie!"
 
         elif player_1.game_choice == "Paper":
             if player_2.game_choice == "Rock":
