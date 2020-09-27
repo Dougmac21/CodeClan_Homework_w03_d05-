@@ -8,23 +8,38 @@ class Prs():
     def play_game(self, player_1, player_2):
 
         permitted_choices = ("Paper", "Rock", "Scissors", "Lizard", "Spock", "CPU")
-        cpu_players = ("HAL-9000", "Deep Thought", "TARDIS", "Data", "ZX-81", "Robbie-Robot")
+        cpu_player_data_choices = ("Lizard", "Rock")
+        cpu_players = ("HAL-9000", "Deep-Thought", "TARDIS", "Data", "ZX-81", "Robbie-Robot", "Unbeatable")
+
+        winning_choice = "win"
+        if player_1.game_choice == "Paper":
+            winning_choice == "Scissors"
+        elif player_1.game_choice == "Rock":
+            winning_choice == "Paper"
+        elif player_1.game_choice == "Scissors":
+            winning_choice == "Spock"
+        elif player_1.game_choice == "Lizard":
+            winning_choice == "Rock"
+        elif player_1.game_choice == "Spock":
+            winning_choice == "Lizard"
 
         import random
         if player_2.name == "CPU" and player_2.game_choice == "CPU":
             player_2.name = random.choice(cpu_players)
             if player_2.name == "HAL-9000":
                 player_2.game_choice = "Paper"
-            if player_2.name == "Deep Thought":
+            elif player_2.name == "Deep-Thought":
                 player_2.game_choice = "Rock"
-            if player_2.name == "TARDIS":
+            elif player_2.name == "TARDIS":
                 player_2.game_choice = "Scissors"
-            if player_2.name == "Data":
-                player_2.game_choice = "Lizard"
-            if player_2.name == "XZ-81":
+            elif player_2.name == "Data":
+                player_2.game_choice = random.choice(cpu_player_data_choices)
+            elif player_2.name == "XZ-81":
                 player_2.game_choice = "Spock"
-            if player_2.name == "Robbie-Robot":
+            elif player_2.name == "Robbie-Robot":
                 player_2.game_choice = random.choice(permitted_choices)
+            elif player_2.name == "Unbeatable":
+                player_2.game_choice = winning_choice
 
         if player_1.game_choice not in permitted_choices and player_2.game_choice not in permitted_choices:
             return f"Both {player_1.name} and {player_2.name} must pick from the permitted choices!"
