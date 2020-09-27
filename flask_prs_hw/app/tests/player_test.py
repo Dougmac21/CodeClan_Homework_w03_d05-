@@ -29,4 +29,4 @@ class PlayerTest(unittest.TestCase):
         self.player_2.check_player_choice_is_valid()
         self.player_2.check_player_choice_is_valid()
         self.assertEqual("Scissors", self.player_1.game_choice)
-        self.assertEqual("You must choose paper, rock or scissors.", self.player_2.check_player_choice_is_valid())
+        self.assertEqual("You must choose Paper, Rock, Scissors, Lizard or Spock.", self.player_2.check_player_choice_is_valid())

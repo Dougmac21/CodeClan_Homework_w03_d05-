@@ -13,7 +13,7 @@ class Prs():
         if player_1.game_choice not in permitted_choices and player_2.game_choice not in permitted_choices:
             return "Both players must pick from the permitted choices!"
         elif player_1.game_choice not in permitted_choices:
-            return "Player 1 must pick from the permitted choices!"
+            return f" must pick from the permitted choices!"
         elif player_2.game_choice not in permitted_choices:
             return "Player 2 must pick from the permitted choices!"
         
