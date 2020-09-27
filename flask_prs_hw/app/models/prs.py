@@ -22,51 +22,51 @@ class Prs():
 
         elif player_1.game_choice == "Paper":
             if player_2.game_choice == "Rock":
-                return "Paper wraps Rock. Player 1 wins!"
+                return f"Paper wraps Rock. {player_1.name} wins!"
             elif player_2.game_choice == "Scissors":
-                return "Scissors cut Paper. Player 2 wins!"
+                return f"Scissors cut Paper. {player_2.name} wins!"
             elif player_2.game_choice == "Lizard":
-                return "Lizard eats Paper. Player 2 Wins!"
+                return f"Lizard eats Paper. {player_2.name} Wins!"
             elif player_2.game_choice == "Spock":
-                return "Spock is disproved by Paper. Player 1 Wins!"
+                return f"Spock is disproved by Paper. {player_1.name} Wins!"
         
         elif player_1.game_choice == "Rock":
             if player_2.game_choice == "Scissors":
-                return "Rock crushes Scissors. Player 1 wins!"
+                return f"Rock crushes Scissors. {player_1.name} wins!"
             elif player_2.game_choice == "Paper":
-                return "Paper wraps Rock. Player 2 wins!"
+                return f"Paper wraps Rock. {player_2.name} wins!"
             elif player_2.game_choice == "Lizard":
-                return "Rock crushes Lizard. Player 1 wins!"
+                return f"Rock crushes Lizard. {player_1.name} wins!"
             elif player_2.game_choice == "Spock":
-                return "Spock vaporises Rock. Player 2 wins!"                
+                return f"Spock vaporises Rock. {player_2.name} wins!"                
         
         elif player_1.game_choice == "Scissors":
             if player_2.game_choice == "Paper":
-                return "Scissors cut Paper. Player 1 wins!"
+                return f"Scissors cut Paper. {player_1.name} wins!"
             elif player_2.game_choice == "Rock":
-                return "Rock crushes Scissors. Player 2 wins!"
+                return f"Rock crushes Scissors. {player_2.name} wins!"
             elif player_2.game_choice == "Lizard":
-                return "Lizard is decapitated by Scissors. Player 1 wins!"
+                return f"Lizard is decapitated by Scissors. {player_1.name} wins!"
             elif player_2.game_choice == "Spock":
-                return "Spock smashes Scissors. Player 2 wins!"
+                return f"Spock smashes Scissors. {player_2.name} wins!"
 
         elif player_1.game_choice == "Lizard":
             if player_2.game_choice == "Paper":
-                return "Lizard eats Paper. Player 1 wins!"
+                return f"Lizard eats Paper. {player_1.name} wins!"
             elif player_2.game_choice == "Rock":
-                return "Rock crushes Lizard. Player 2 wins!"
+                return f"Rock crushes Lizard. {player_2.name} wins!"
             elif player_2.game_choice == "Scissors":
-                return "Scissors decapitate Lizard. Player 2 wins!"
+                return f"Scissors decapitate Lizard. {player_2.name} wins!"
             elif player_2.game_choice == "Spock":
-                return "Lizard poisons Spock. Player 1 wins!"
+                return f"Lizard poisons Spock. {player_1.name} wins!"
 
         elif player_1.game_choice == "Spock":
             if player_2.game_choice == "Paper":
-                return "Paper disproves Spock. Player 2 wins!"
+                return f"Paper disproves Spock. {player_2.name} wins!"
             elif player_2.game_choice == "Rock":
-                return "Spock vaporises Rock. Player 1 wins!"
+                return f"Spock vaporises Rock. {player_1.name} wins!"
             elif player_2.game_choice == "Scissors":
-                return "Spock smashes Scissors. Player 1 wins!"
+                return f"Spock smashes Scissors. {player_1.name} wins!"
             elif player_2.game_choice == "Lizard":
-                return "Lizard poisons Spock. Player 2 wins!"
+                return f"Lizard poisons Spock. {player_2.name} wins!"
 
