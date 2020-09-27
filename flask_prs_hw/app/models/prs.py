@@ -22,7 +22,7 @@ class Prs():
 
         elif player_1.game_choice == "Paper":
             if player_2.game_choice == "Rock":
-                return "Paper wraps Rock Player 1 wins!"
+                return "Paper wraps Rock. Player 1 wins!"
             elif player_2.game_choice == "Scissors":
                 return "Scissors cut Paper. Player 2 wins!"
             elif player_2.game_choice == "Lizard":
@@ -64,7 +64,7 @@ class Prs():
             if player_2.game_choice == "Paper":
                 return "Paper disproves Spock. Player 2 wins!"
             elif player_2.game_choice == "Rock":
-                return "Spock vaporises Rock Player 1 wins!"
+                return "Spock vaporises Rock. Player 1 wins!"
             elif player_2.game_choice == "Scissors":
                 return "Spock smashes Scissors. Player 1 wins!"
             elif player_2.game_choice == "Lizard":
