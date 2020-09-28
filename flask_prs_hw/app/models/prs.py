@@ -16,11 +16,11 @@ class Prs():
         else:
             player_2.game_choice = player_2.game_choice.capitalize()
 
-        permitted_choices = ("Paper", "Rock", "Scissors", "Lizard", "Spock", "Shotgun", "Surrender")
+        permitted_choices = ("Paper", "Rock", "Scissors", "Lizard", "Spock", "Shotgun")
         cpu_player_malcolm_choices = ("Paper", "Rock", "Scissors", "Lizard", "Spock")
         cpu_player_hannah_choices = ("Scissors", "Rock")    # Spock always beats Hannah
         cpu_player_chris_choices = ("Paper", "Lizard")      # Scissors always beats Chris
-        cpu_players = ("Hal", "Morag", "Chris", "Hannah", "Zsolt", "Malcolm", "Harrison", "Cpu")
+        cpu_players = ("Hal", "Morag", "Chris", "Hannah", "Zsolt", "Malcolm", "Harrison")
 
         if player_1.game_choice == "Paper":
             winning_choice = "Scissors"
@@ -73,6 +73,10 @@ class Prs():
                 return f"{player_1.name} chose {player_1.game_choice}. {player_2.name} chose {player_2.game_choice}. Lizard eats Paper. {player_2.name} Wins!"
             elif player_2.game_choice == "Spock":
                 return f"{player_1.name} chose {player_1.game_choice}. {player_2.name} chose {player_2.game_choice}. Spock is disproved by Paper. {player_1.name} Wins!"
+            elif player_2.game_choice == "Shotgun":
+                return f"{player_2.name} must pick from the permitted choices!"
+            elif player_2.game_choice == "Surrender":
+                return f"{player_2.name} must pick from the permitted choices!"
         
         elif player_1.game_choice == "Rock":
             if player_2.game_choice == "Scissors":
@@ -82,7 +86,11 @@ class Prs():
             elif player_2.game_choice == "Lizard":
                 return f"{player_1.name} chose {player_1.game_choice}. {player_2.name} chose {player_2.game_choice}. Rock crushes Lizard. {player_1.name} wins!"
             elif player_2.game_choice == "Spock":
-                return f"{player_1.name} chose {player_1.game_choice}. {player_2.name} chose {player_2.game_choice}. Spock vaporises Rock. {player_2.name} wins!"                
+                return f"{player_1.name} chose {player_1.game_choice}. {player_2.name} chose {player_2.game_choice}. Spock vaporises Rock. {player_2.name} wins!"
+            elif player_2.game_choice == "Shotgun":
+                return f"{player_2.name} must pick from the permitted choices!"
+            elif player_2.game_choice == "Surrender":
+                return f"{player_2.name} must pick from the permitted choices!"                                
         
         elif player_1.game_choice == "Scissors":
             if player_2.game_choice == "Paper":
@@ -93,6 +101,10 @@ class Prs():
                 return f"{player_1.name} chose {player_1.game_choice}. {player_2.name} chose {player_2.game_choice}. Lizard is decapitated by Scissors. {player_1.name} wins!"
             elif player_2.game_choice == "Spock":
                 return f"{player_1.name} chose {player_1.game_choice}. {player_2.name} chose {player_2.game_choice}. Spock smashes Scissors. {player_2.name} wins!"
+            elif player_2.game_choice == "Shotgun":
+                return f"{player_2.name} must pick from the permitted choices!"
+            elif player_2.game_choice == "Surrender":
+                return f"{player_2.name} must pick from the permitted choices!"
 
         elif player_1.game_choice == "Lizard":
             if player_2.game_choice == "Paper":
@@ -103,6 +115,10 @@ class Prs():
                 return f"{player_1.name} chose {player_1.game_choice}. {player_2.name} chose {player_2.game_choice}. Scissors decapitate Lizard. {player_2.name} wins!"
             elif player_2.game_choice == "Spock":
                 return f"{player_1.name} chose {player_1.game_choice}. {player_2.name} chose {player_2.game_choice}. Lizard poisons Spock. {player_1.name} wins!"
+            elif player_2.game_choice == "Shotgun":
+                return f"{player_2.name} must pick from the permitted choices!"
+            elif player_2.game_choice == "Surrender":
+                return f"{player_2.name} must pick from the permitted choices!"
 
         elif player_1.game_choice == "Spock":
             if player_2.game_choice == "Paper":
@@ -113,11 +129,15 @@ class Prs():
                 return f"{player_1.name} chose {player_1.game_choice}. {player_2.name} chose {player_2.game_choice}. Spock smashes Scissors. {player_1.name} wins!"
             elif player_2.game_choice == "Lizard":
                 return f"{player_1.name} chose {player_1.game_choice}. {player_2.name} chose {player_2.game_choice}. Lizard poisons Spock. {player_2.name} wins!"
-        
+            elif player_2.game_choice == "Shotgun":
+                return f"{player_2.name} must pick from the permitted choices!"
+            elif player_2.game_choice == "Surrender":
+                return f"{player_2.name} must pick from the permitted choices!"
+
         elif player_1.game_choice == "Shotgun":
+            if player_2.name == "Harrison":
                 return f"{player_1.name} chose {player_1.game_choice} because {player_2.name} is cheating. {player_2.name} chose {player_2.game_choice}. {player_1.name} wins!"
-        
-        elif player_1.game_choice == "Surrender":
-                return f"{player_1.name} chose {player_1.game_choice}. {player_2.name} wins!"
+            elif player_2.name != "Harrison":
+                return f"{player_1.name} must pick from the permitted choices!"
                 
                 
