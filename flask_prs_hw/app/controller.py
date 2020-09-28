@@ -29,6 +29,14 @@ def cpu_page(player_1_name, player_1_game_choice, cpu_player_name):
 def welcome_page():
     return render_template('welcome.html')
 
+@app.route('/hint')
+def hint_page():
+    return render_template('hint.html')
+
+@app.route('/extra-hint')
+def extra_hint_page():
+    return render_template('extra-hint.html')
+
 @app.route('/play')
 def home_page():
     return render_template('play.html')
