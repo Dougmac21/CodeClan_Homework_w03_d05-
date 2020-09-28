@@ -1,5 +1,6 @@
 class Prs():
 
+
     # def __init__(self, player_1, player_2):
     #     self.player_1 = player_1
     #     self.player_2 = player_2
@@ -16,11 +17,13 @@ class Prs():
         else:
             player_2.game_choice = player_2.game_choice.capitalize()
 
+
         permitted_choices = ("Paper", "Rock", "Scissors", "Lizard", "Spock", "Shotgun")
         cpu_player_malcolm_choices = ("Paper", "Rock", "Scissors", "Lizard", "Spock")
         cpu_player_hannah_choices = ("Scissors", "Rock")    # Spock always beats Hannah
         cpu_player_chris_choices = ("Paper", "Lizard")      # Scissors always beats Chris
         cpu_players = ("Hal", "Morag", "Chris", "Hannah", "Zsolt", "Malcolm", "Harrison")
+
 
         if player_1.game_choice == "Paper":
             winning_choice = "Scissors"
@@ -35,7 +38,9 @@ class Prs():
         elif player_1.game_choice == "Shotgun":
             winning_choice = "Surrender"
 
+
         import random
+
         if player_2.name == "Cpu":
             player_2.name = random.choice(cpu_players)
         
@@ -54,6 +59,7 @@ class Prs():
         elif player_2.name == "Harrison":
             player_2.game_choice = winning_choice
 
+
         if player_1.game_choice not in permitted_choices and player_2.game_choice not in permitted_choices:
             return f"Both {player_1.name} and {player_2.name} must pick from the permitted choices!"
         elif player_1.game_choice not in permitted_choices:
@@ -61,8 +67,10 @@ class Prs():
         elif player_2.game_choice not in permitted_choices:
             return f"{player_2.name} must pick from the permitted choices!"
         
+
         if player_1.game_choice == player_2.game_choice:
             return f"Both {player_1.name} and {player_2.name} have chosen {player_1.game_choice}. That means that it's a tie!"
+
 
         elif player_1.game_choice == "Paper":
             if player_2.game_choice == "Rock":
