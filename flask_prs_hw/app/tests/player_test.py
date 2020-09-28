@@ -22,11 +22,3 @@ class PlayerTest(unittest.TestCase):
         self.assertEqual("Polo", self.player_2.name)
         self.assertEqual("Scissors", self.player_1.game_choice)
         self.assertEqual("Paper", self.player_2.game_choice)
-
-    def test_player_choice_is_valid(self):
-        self.player_1 = Player("Marko", "Scissors")
-        self.player_2 = Player("Polo", "Hammer")
-        self.player_2.check_player_choice_is_valid()
-        self.player_2.check_player_choice_is_valid()
-        self.assertEqual("Scissors", self.player_1.game_choice)
-        self.assertEqual("You must choose Paper, Rock, Scissors, Lizard or Spock.", self.player_2.check_player_choice_is_valid())
