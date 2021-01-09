@@ -1,1 +1,143 @@
-/* CSS STYLING IN HERE */
+body {
+    padding: 0;
+}
+
+.prs-container{
+    background: url(../assets/sky.jpg) no-repeat center center fixed;
+    background-size: cover;
+    display: 100vh;
+    width: 100%;
+  }
+
+  #header {
+      text-align: center;
+  }
+
+  .game-form {
+      text-align: center;
+      padding: 0
+  }
+
+  .prs-text {
+      color: white;
+      font-family: 'Press Start 2P', cursive;
+      margin: 0
+  }
+
+  .prs-button {
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #38125c;
+    box-shadow: #8a43cc;    
+    padding: 15px;
+    margin: 20px;
+    font-size: 20px;
+    text-shadow: 
+    0 0 12px rgba(202,228,225,0.92),
+    0 0 60px rgba(98, 3, 117, 0.34),
+    0 0 20px rgba(116, 8, 143, 0.52),
+    0 0 40px rgba(207, 30, 242, 0.92),
+    0 0 50px rgba(210, 83, 221, 0.78),
+    0 0 80px rgba(232, 110, 236, 0.92);
+  }
+
+
+
+
+
+
+ul {
+    list-style: none;
+}
+
+
+
+input {
+    text-align: center;
+}
+
+.select-cpu-header {
+    font-size: smaller;
+}
+
+.select-cpu-choice {
+    font-size: 28px;
+    margin-left: 25px;
+    margin-right: 0px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    padding-left: none;
+    color: gold;
+    text-align: center;
+}
+
+#player-one-weapon-input {
+    padding-top: 8px;
+    height: 40px;
+    width: 200px;
+    font-family: 'Press Start 2P', cursive;
+    background-color: rgb(247, 0, 255);
+    color: #ffffff;    
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    rgb(85, 0, 85);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    rgb(85, 0, 85);
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    rgb(85, 0, 85);
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    rgb(85, 0, 85);
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:    rgb(85, 0, 85);
+}
+
+::placeholder { /* Most modern browsers support this now. */
+   color:    rgb(85, 0, 85);
+}
+
+.submit-score-button{
+    height: 40px;
+    width: 100px;
+    margin-left: 25px;
+}
+
+.play-game-button{
+    height: 40px;
+    width: 100px;
+    margin-right: 25px;
+}
+
+.cpu-player-button {
+    height: 30px;
+    width: 80px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.game-text{
+    padding: 10px;
+    margin: 0
+}
+
+.prs-h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    color: gold;
+    text-align: center;
+}
+
+#scores-array {
+    text-align: center;
+}
+
+#scores-values {
+    font-family: 'Press Start 2P', cursive;
+}
+

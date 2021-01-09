@@ -44,9 +44,9 @@ class Prs():
         if player_2.name == "Cpu":
             player_2.name = random.choice(cpu_players)
         
-        if player_2.name == "Hal":
+        if player_2.name == "Emily":
             player_2.game_choice = "Paper"
-        elif player_2.name == "Morag":
+        elif player_2.name == "Eugene":
             player_2.game_choice = "Rock"
         elif player_2.name == "Chris":
             player_2.game_choice = random.choice(cpu_player_chris_choices)

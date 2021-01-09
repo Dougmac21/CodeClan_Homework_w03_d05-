@@ -2,41 +2,50 @@
 
 {%  block content  %}
 
-<body>
+<body className="prs-container">
     <main>
         <hr>
+        <h4 className="prs-h2">Select Opponent:</h4>
+        <div className="select-cpu-choice" onChange={handleCPUPlayerChoice}>
+            <input className="select-cpu-choice" type="radio" value="Emily" name="cpu_player" /> Emily
+            <input className="select-cpu-choice" type="radio" value="Hannah" name="cpu_player" /> Hannah
+            <input className="select-cpu-choice" type="radio" value="Eugene" name="cpu_player" /> Eugene
+            <input className="select-cpu-choice" type="radio" value="Chris" name="cpu_player" /> Chris
+            <input className="select-cpu-choice" type="radio" value="Zsolt" name="cpu_player" /> Zsolt
+            <input className="select-cpu-choice" type="radio" value="Malcolm" name="cpu_player" /> Malcolm
+            <input className="select-cpu-choice" type="radio" value="Harrison" name="cpu_player" /> Harrison
+        </div>
+        <br>
         <br>
         <form action="/play" method="POST">
-            <label for="player_1">Player 1 Name:</label>
+            <label for="player_1">Your Name:</label>
             <input type="text" name="player_1" id="player_1">
             <br>
         
-            <label for="player_1_weapon">Player 1 Weapon:</label>
+            <label for="player_1_weapon">Your Weapon:</label>
             <input type="text" name="name" id="name">
             <br>
             <br>
         
-            <label for="player_2_name">Player 2 Name</label>
+            <!-- <label for="player_2_name">Player 2 Name</label>
             <input type="text" name="attendees" id="attendees">
             <br>
         
             <label for="player_2_weapon">Player 2 Weapon</label>
             <input type="text" name="location" id="location">
             <br>
-            <br>
+            <br> -->
         
-            <label for="cpu_player">Cpu Player?</label>
+            <!-- <label for="cpu_player">Cpu Player?</label>
             <input type="checkbox" name="cpu_player?" id="cpu_player?">
             <br>
-            <br>
-            <br>
+            <br> -->
             
             <input type="submit" value="Play">
             </form>
         <br>
         <br>
         Latest Game Result:
-        <br>
         <br>
         <H2>
         {{ result_of_game }}
