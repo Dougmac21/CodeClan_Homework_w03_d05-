@@ -1,30 +1,15 @@
-## Weekend Homework - Rock Paper Scissors
+ -  File Setup`
 
-Create a simple flask app to allow the user to play rock, paper, scissors in their browser.
-
-- You should be able to go to `/rock/scissors` and return the string "Player 1 wins by playing rock" to the page, for example.
-
-- Write a class to represent the player. The player will have a name and their choice (rock/paper/scissors).
-
-- Write a game class that has a function that takes in the 2 players and compares their choices and returns the winning player. If it is a draw the player should be `None` type.
-
-- Change your route to use a template to display the users choices and the result.
-
-### Extensions:
+1)	mkdir flask_prs_hw
+2)	cd flask_prs_hw
+3)	mkdir app models templates tests static
+4)	touch __init__.py prs_game.py run_tests.py .flaskenv
+5)	touch app/__init__.py controller.py
+6)	touch app/models/player.py prs.py
+7)	touch app/templates/index.html base.html
+8)	touch app/static/main.css
+9)	touch app/tests/test_player.py test_prs.py
 
 
-- Add a welcome page (and a route to get it) to explain the rules before the user picks their move. Add a link to this in the base template.
+B – File Setup pt.2
 
-- Add some CSS to either/both of your pages.
-
-### Further extension:
-
- Extend the game with a new page to allow the user to play against the computer.
-
- If they go to `/play` it will take the user to a form to allow them to enter their name and choose a move from a dropdown.
-
- Add a link to this page to the base template.
-
- Write a new method in the game class to generate a computer player with the name "Computer" and a random choice from rock, paper and scissors. (Look into the [random.choice](https://docs.python.org/3/library/random.html)) library.
-
- Use the same game logic and results template to display the winner.

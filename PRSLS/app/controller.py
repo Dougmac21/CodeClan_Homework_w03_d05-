@@ -37,6 +37,6 @@ def hint_page():
 def extra_hint_page():
     return render_template('extra-hint.html')
 
-@app.route('/play')
-def home_page():
+@app.route('/play', methods=['POST'])
+def game_page():
     return render_template('play.html')
