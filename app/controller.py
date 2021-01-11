@@ -8,7 +8,6 @@ from app.models.prs import *
 def index_page():
     return render_template('index.html')
 
-
 @app.route('/<player_1_name>/<player_1_game_choice>/<player_2_name>/<player_2_game_choice>')
 def play_page(player_1_name, player_1_game_choice, player_2_name, player_2_game_choice):
     player_1 = Player(player_1_name, player_1_game_choice)
@@ -40,3 +39,12 @@ def extra_hint_page():
 @app.route('/play', methods=['GET', 'POST'])
 def game_page():
     return render_template('play.html')
+
+@app.route('/result', methods=['GET', 'POST'])
+def result_page():
+    player_1 = Player(player_1_name, player_1_game_choice)
+    cpu_player = Player(cpu_player_name, None)
+    the_game = Prs()
+    game_result = the_game.play_game(player_1, cpu_player)
+    return render_template('play.html', result_of_game=game_result)
+    return render_template('result.html')

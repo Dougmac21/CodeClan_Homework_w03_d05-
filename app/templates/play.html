@@ -5,7 +5,7 @@
 <body className="prs-container">
     <main>
         <hr>
-        <h4 className="prs-h2">Select Opponent:</h4>
+        <h4 className="prs-h4">Select Opponent:</h4>
         <div className="select-cpu-choice" onChange={handleCPUPlayerChoice}>
             <input className="select-cpu-choice" type="radio" value="Emily" name="cpu_player" /> Emily
             <input className="select-cpu-choice" type="radio" value="Hannah" name="cpu_player" /> Hannah
@@ -23,25 +23,11 @@
             <br>
         
             <label for="player_1_weapon">Your Weapon:</label>
-            <input type="text" name="name" id="name">
+            <input type="text" name="player_1_weapon" id="player_1_weapon">
             <br>
             <br>
         
-            <!-- <label for="player_2_name">Player 2 Name</label>
-            <input type="text" name="attendees" id="attendees">
-            <br>
-        
-            <label for="player_2_weapon">Player 2 Weapon</label>
-            <input type="text" name="location" id="location">
-            <br>
-            <br> -->
-        
-            <!-- <label for="cpu_player">Cpu Player?</label>
-            <input type="checkbox" name="cpu_player?" id="cpu_player?">
-            <br>
-            <br> -->
-            
-            <input type="submit" value="Play">
+            <button id="submitForm" value="Play">
             </form>
         <br>
         <br>
@@ -51,6 +37,11 @@
         {{ result_of_game }}
         </H2>
     </main>
+    <script>
+        $('#submitForm').click(function() {
+            alert("RESULT");
+        });
+    </script>
 </body>
 
 {%  endblock  %}
