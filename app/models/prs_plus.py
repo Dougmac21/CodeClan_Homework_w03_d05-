@@ -1,4 +1,4 @@
-class Prs():
+class PrsPlus():
 
 
     # def __init__(self, player_1, player_2):
@@ -8,23 +8,21 @@ class Prs():
 
     def play_game(self, player_1, player_2):
 
+# Game logic follows.
+
+        # Automatic capitalisation of input strings.
         player_1.name = player_1.name.capitalize()
-        player_2.name = player_2.name.capitalize()
-        
-        player_1.game_choice =player_1.game_choice.capitalize()
-        if player_2.game_choice == None:
-            pass
-        else:
-            player_2.game_choice = player_2.game_choice.capitalize()
+        player_1.game_choice = player_1.game_choice.capitalize()
 
 
+        # Declaration of game choice parameters.
         permitted_choices = ("Paper", "Rock", "Scissors", "Lizard", "Spock", "Shotgun")
         cpu_player_malcolm_choices = ("Paper", "Rock", "Scissors", "Lizard", "Spock")
         cpu_player_hannah_choices = ("Scissors", "Rock")    # Spock always beats Hannah
         cpu_player_chris_choices = ("Paper", "Lizard")      # Scissors always beats Chris
         cpu_players = ("Hal", "Morag", "Chris", "Hannah", "Zsolt", "Malcolm", "Harrison")
 
-
+        # Fixing of winning game choices given player choice.
         if player_1.game_choice == "Paper":
             winning_choice = "Scissors"
         elif player_1.game_choice == "Rock":
@@ -38,12 +36,14 @@ class Prs():
         elif player_1.game_choice == "Shotgun":
             winning_choice = "Surrender"
 
-
+        # Import random number generator.
         import random
 
+        # Select randon CPU player.
         if player_2.name == "Cpu":
             player_2.name = random.choice(cpu_players)
         
+        # Define CPU game choice according to CPU player name.
         if player_2.name == "Emily":
             player_2.game_choice = "Paper"
         elif player_2.name == "Eugene":
@@ -60,17 +60,17 @@ class Prs():
             player_2.game_choice = winning_choice
 
 
-        if player_1.game_choice not in permitted_choices and player_2.game_choice not in permitted_choices:
-            return f"Both {player_1.name} and {player_2.name} must pick from the permitted choices!"
+        # Ensure that player selects from valid options.
         elif player_1.game_choice not in permitted_choices:
             return f"{player_1.name} must pick from the permitted choices!"
-        elif player_2.game_choice not in permitted_choices:
-            return f"{player_2.name} must pick from the permitted choices!"
         
 
-        if player_1.game_choice == player_2.game_choice:
-            return f"Both {player_1.name} and {player_2.name} have chosen {player_1.game_choice}. That means that it's a tie!"
 
+# Logic for handling of who wins given game choice combinations follows.
+
+        # (Tie if same choice made)
+        if player_1.game_choice == player_2.game_choice:
+            return f"Both {player_1.name} and {player_2.name} have chosen {player_1.game_choice}. It's a tie!"
 
         elif player_1.game_choice == "Paper":
             if player_2.game_choice == "Rock":
@@ -147,5 +147,3 @@ class Prs():
                 return f"{player_1.name} chose {player_1.game_choice} because {player_2.name} is cheating. {player_2.name} chose {player_2.game_choice}. {player_1.name} wins!"
             elif player_2.name != "Harrison":
                 return f"{player_1.name} must pick from the permitted choices!"
-                
-                

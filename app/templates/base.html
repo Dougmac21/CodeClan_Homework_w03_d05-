@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href='../static/main.css'> 
-    <title>PRSLS The Game!</title>
-</head>
-<body>
-    <nav>
-        <br>
-        <ul>
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
-                <a href="/welcome">Instructions</a>
-            </li>
-            <li>
-                <a href="/play">Play</a>
-            </li>
-            <li>
-                <a href="/hint">Stuck?</a>
-            </li>
-        </ul>
-        <br>
-    </nav>
-    <h1 id="header">Play Paper Rock Scissors Lizard Spock.</h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href='../static/main.css'> 
+        <title>PRSLS The Game!</title>
+    </head>
+    
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/instructions">Instructions</a>
+                    </li>
+                    <li>
+                        <a href="/play">Play</a>
+                    </li>
+                    <li>
+                        <a href="/stuck">Stuck?</a>
+                    </li>
+                </ul>
+            </nav>
 
-    {%  block content  %}
+            <h1 id="header">PRS-Plus</h1>
 
-    {%  endblock  %}
+        </header>
 
-</body>
+        {%  block content  %}
+
+        {%  endblock  %}
+
+    </body>
 </html>

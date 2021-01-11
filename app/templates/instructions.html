@@ -1,0 +1,50 @@
+{%  extends "base.html"  %}
+
+{%  block content  %}
+
+<main>
+    <hr>
+    <br>
+    <br>
+    To play the game put your name and your choice of paper, rock, scissors, lizard or spock into the address bar after the localhost:5000
+    <br>
+    <br>
+    e.g. 
+    <br>
+    localhost:5000/joe/rock
+    <br>
+    <br>
+    Follow this with your opponents name and their choice.
+    <br>
+    <br>
+    e.g
+.        <br>
+    localhost:5000/joe/rock/sue/paper
+    <br>
+    <br>
+    hit return and the page will tell you who won!
+    <br>
+    <br>
+    You can also play against the computer!
+    <br>
+    <br>
+    The computer players are named:
+    <br>
+    "Hal", "Morag", "Chris", "Hannah", "Zsolt", "Malcolm", and "Harrison"
+    <br>
+    <br>
+    To play against a computer, put their name into the player 2 position. To play against a random computer opponent, use the name "cpu".
+    <br>
+    <br>
+    e.g.
+    <br>
+    localhost:5000/joe/rock/malcolm
+    <br>
+    localhost:5000/joe/rock/cpu
+    <br>
+    <br>
+    <br>
+    <br>
+</main>
+
+{%  endblock  %}
