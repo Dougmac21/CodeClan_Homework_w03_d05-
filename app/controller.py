@@ -1,5 +1,5 @@
 from app import app
-from flask import render_template
+from flask import render_template, request
 from app.models.player import *
 from app.models.prs_plus import *
 
@@ -18,6 +18,10 @@ def stuck_page():
 
 @app.route('/play', methods=['GET', 'POST'])
 def game_page():
+    if request.method == 'POST':
+        req = request.form 
+
+
     return render_template('play.html')
 
 @app.route('/<player_1_name>/<player_1_game_choice>/<cpu_player_name>')
