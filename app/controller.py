@@ -4,25 +4,18 @@ from app.models.player import *
 from app.models.prs_plus import *
 
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index_page():
-    return render_template('index.html')
+    if request.method == 'POST':
+        req = request.form 
 
-@app.route('/instructions')
-def instructions_page():
-    return render_template('instructions.html')
+
+    return render_template('index.html')
 
 @app.route('/stuck')
 def stuck_page():
     return render_template('stuck.html')
 
-@app.route('/play', methods=['GET', 'POST'])
-def game_page():
-    if request.method == 'POST':
-        req = request.form 
-
-
-    return render_template('play.html')
 
 @app.route('/<player_1_name>/<player_1_game_choice>/<cpu_player_name>')
 def cpu_page(player_1_name, player_1_game_choice, cpu_player_name):
