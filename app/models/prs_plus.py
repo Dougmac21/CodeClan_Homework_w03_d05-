@@ -61,8 +61,8 @@ class PrsPlus():
 
 
         # Ensure that player selects from valid options.
-        elif player_1.game_choice not in permitted_choices:
-            return f"{player_1.name} must pick from the permitted choices!"
+        if player_1.game_choice not in permitted_choices:
+            return f"{player_1.name} must pick from the permitted choices."
         
 
 
