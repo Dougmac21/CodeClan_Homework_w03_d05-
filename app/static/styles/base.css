@@ -1,8 +1,7 @@
 body {
-    width: 50vw;
-    height: 50vh;
+    padding-top: 10vh;
+    width: 40vw;
+    height: 60vh;
     align-items: center;
     text-align: center;
 }
-
-
