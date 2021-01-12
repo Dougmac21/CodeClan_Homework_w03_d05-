@@ -1,7 +1,17 @@
 body {
     padding-top: 10vh;
+    padding-left:30vw;
     width: 40vw;
     height: 60vh;
     align-items: center;
     text-align: center;
+}
+
+p {
+    color: rgba(211, 211, 211, 0.250);
+    font-size: smaller;
+}
+
+#player_1 {
+    margin-bottom: 0.5vh;
 }
