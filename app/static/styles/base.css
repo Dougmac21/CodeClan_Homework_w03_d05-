@@ -7,7 +7,8 @@ body {
     text-align: center;
 }
 
-p {
+
+#harrison-hint {
     color: rgba(211, 211, 211, 0.250);
     font-size: smaller;
 }
