@@ -7,7 +7,6 @@ class PrsBasic():
 
         # Automatic capitalisation of input strings.
         player_1.name = player_1.name.capitalize()
-        player_1.game_choice = player_1.game_choice.capitalize()
 
 
         # Declaration of game choice parameters.
@@ -15,13 +14,11 @@ class PrsBasic():
         cpu_player_paul_choices = ("Paper", "Rock", "Scissors")
         cpu_players = ("Paul", "Drew", "Murray", "Steve")
 
+
         # Import random number generator.
         import random
 
-        # Select randon CPU player.
-        if player_2.name == "Cpu":
-            player_2.name = random.choice(cpu_players)
-        
+
         # Define CPU game choice according to CPU player name.
         if player_2.name == "Paul":
             player_2.game_choice = random.choice(cpu_player_paul_choices)
@@ -38,13 +35,14 @@ class PrsBasic():
             return f"{player_1.name} must pick from the permitted choices."
         
 
-
 # Logic for handling of who wins given game choice combinations follows.
 
         # (Tie if same choice made)
         if player_1.game_choice == player_2.game_choice:
             return f"Both {player_1.name} and {player_2.name} have chosen {player_1.game_choice}. It's a tie!"
 
+
+        # (else comparitive logic)
         elif player_1.game_choice == "Paper":
             if player_2.game_choice == "Rock":
                 return f"{player_1.name} chose {player_1.game_choice}. {player_2.name} chose {player_2.game_choice}. Paper wraps Rock. {player_1.name} wins!"
